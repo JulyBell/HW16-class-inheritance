@@ -1,4 +1,4 @@
-let dateArea = document.querySelector('#main');
+let clockPlace = document.querySelector('#main');
 let switcher = true;
 
 class Clock{
@@ -13,9 +13,6 @@ class Clock{
 }
 
 class LongDate extends Clock{
-	constructor(elem){
-		super(elem);
-	}
 
 	showDate(){
 		let date = new Date();
@@ -25,9 +22,6 @@ class LongDate extends Clock{
 }
 
 class ShortDate extends Clock{
-	constructor(elem){
-		super(elem);
-	}
 
 	showDate(){
 		let date = new Date();
@@ -37,14 +31,14 @@ class ShortDate extends Clock{
 }
 
 
-dateArea.addEventListener('click', (e) => {
+clockPlace.addEventListener('click', (e) => {
 	e.preventDefault();
 		switcher = !switcher;
-		console.log('clicked' + switcher);
+		console.log('clicked ' + switcher);
 })
 
-let longDate = new LongDate(dateArea);
-let shortDate = new ShortDate(dateArea);
+let longDate = new LongDate(clockPlace);
+let shortDate = new ShortDate(clockPlace);
 
 
 setInterval(function(){
