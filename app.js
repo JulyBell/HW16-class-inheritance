@@ -3,12 +3,12 @@ let switcher = true;
 
 class Clock{
 	constructor(elem){
-		this.dateArea = elem;
+		this.clockArea = elem;
 	}
 
 	showDate(){
 		let dateFormat = new Date();
-		this.dateArea.innerHTML = `<p>Current date: ${dateFormat}</p>`;
+		this.clockArea.innerHTML = `<p>Current date: ${dateFormat}</p>`;
 	}
 }
 
@@ -17,7 +17,7 @@ class LongDate extends Clock{
 	showDate(){
 		let date = new Date();
 		let dateFormat = date.getHours() + ' : ' + date.getMinutes() + ' : ' + date.getSeconds();
-		this.dateArea.innerHTML = `<p>Current date: ${dateFormat}</p>`;
+		this.clockArea.innerHTML = `<p>Current date: ${dateFormat}</p>`;
 	}
 }
 
@@ -26,7 +26,7 @@ class ShortDate extends Clock{
 	showDate(){
 		let date = new Date();
 		let dateFormat = date.getHours() + ' : ' + date.getMinutes();
-		this.dateArea.innerHTML = `<p>Current date: ${dateFormat}</p>`;
+		this.clockArea.innerHTML = `<p>Current date: ${dateFormat}</p>`;
 	}
 }
 
